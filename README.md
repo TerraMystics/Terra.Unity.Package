@@ -56,6 +56,8 @@ This package can be used for Mobile & Web Developers, or SDK Developers looking 
 
 ### Manage Payments
 
+Please note: **PaymentsManager** must be registered as a Singleton to prevent issues with the Connection Pool.
+
 ```cs
 void ProcessPaymentForTerra() {
      string businessWallet = "terra17lmam6zguazs5q5u6z5mmx76uj63gldnse2pdp"; // Wallet where customer payments will be transferred to
