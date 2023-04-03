@@ -10,16 +10,8 @@ A lightweight payment management library for the terra ecosystem for the Unity G
 <br/>
 
 <p align="center">
-  <a href="https://docs.terra.money/"><strong>Explore the Docs »</strong></a>
+  <a href="https://terradocs.money/"><strong>Explore the Docs »</strong></a>
   <br />
-  <br/>
-  <a href="https://github.com/TerraMystics/Terra.Net.OnChainPayments/tree/main/Terra.Net.OnChainPayments/OnChainPaymentsSimulator">Example App</a>
-  ·
-  <a href="https://github.com/TerraMystics/Terra.Net.OnChainPayments">API Reference</a>
-  ·
-  <a href="https://www.nuget.org/packages/Terra.Net.OnChainPayments">NuGet Package</a>
-  ·
-  <a href="https://github.com/TerraMystics/Terra.Net.OnChainPayments">GitHub</a>
 </p>
 
 Internally manages gas estimation required by the burn tax for successful transactions on the blockchain. Makes it easier for devs to get started with payments on the LUNC/LUNA Blockchains.
