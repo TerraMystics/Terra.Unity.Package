@@ -4,24 +4,10 @@
 </p>
 
 <p align="center">
-A lightweight payment management library for the terra ecosystem
+A lightweight payment management library for the terra ecosystem for the Unity GameEngine
 
 </p>
 <br/>
-
-<p align="center">
-  <a href="https://github.com/TerraMystics/Terra.Net.OnChainPayments/blob/main/LICENSE">
-  <img alt="GitHub" src="https://img.shields.io/github/license/terra-money/terra.js">
-  </a>
-    
-  <a href="https://www.nuget.org/packages/Terra.Net.OnChainPayments">
-    <img alt="GitHub" src="https://img.shields.io/nuget/v/Terra.Net.OnChainPayments">
-  </a>
-  
-  <a href="https://www.nuget.org/packages/Terra.Net.OnChainPayments">
-    <img alt="GitHub" src="https://img.shields.io/nuget/dt/Terra.Net.OnChainPayments?color=red">
-  </a>
-</p>
 
 <p align="center">
   <a href="https://docs.terra.money/"><strong>Explore the Docs »</strong></a>
@@ -47,7 +33,7 @@ Internally manages gas estimation required by the burn tax for successful transa
 
 Please make sure to import the following [package](https://github.com/TerraMystics/Terra.Unity.Package/blob/main/terra.payments.unitypackage) into your project as an asset.
 
-Please also make sure to install the following [dependency](https://github.com/jilleJr/Newtonsoft.Json-for-Unity/wiki/Install-official-via-UPM) package into your project too.
+Please also make sure to install the following [dependency](https://github.com/TerraMystics/Newtonsoft.Json-for-Unity) package into your project too.
 
 ## Usage
 
