@@ -41,7 +41,6 @@ Internally manages gas estimation required by the burn tax for successful transa
 ## Features
 
 - **Written in C#**, with type definitions
-- Works with Xamarin, Unity, Asp, and all other frameworks in the .Net Ecosystems
 - Makes it easier to manage payments for anyone deploying to the Apple or Google app stores
 
 ## Installation & Configuration
@@ -52,7 +51,7 @@ Please also make sure to install the following [dependency](https://github.com/j
 
 ## Usage
 
-This package can be used for Mobile & Web Developers, or SDK Developers looking to extend the Terra Platform
+This package can be used for Mobile & Web Developers working with Unity, or SDK Developers looking to extend the Terra Platform
 
 ### Manage Payments
 
@@ -60,8 +59,11 @@ Please note: **PaymentsManager** must be registered as a Singleton to prevent is
 
 ```cs
 void ProcessPaymentForTerra() {
-     string businessWallet = "terra17lmam6zguazs5q5u6z5mmx76uj63gldnse2pdp"; // Wallet where customer payments will be transferred to
-     string customerRecoveryWords = "notice oak worry limit wrap speak medal online prefer cluster roof addict wrist behave treat actual wasp year salad speed social layer crew genius"; // Recovery Words of the Customer wallet that will be making the payment
+     // Wallet where customer payments will be transferred to
+     string businessWallet = "terra17lmam6zguazs5q5u6z5mmx76uj63gldnse2pdp";
+
+     // Recovery Words of the Customer wallet that will be making the payment
+     string customerRecoveryWords = "notice oak worry limit wrap speak medal online prefer cluster roof addict wrist behave treat actual wasp year salad speed social layer crew genius";
 
      // Configure your PaymentManager
      // Set Blockchain to target (in this case Classic)
@@ -69,14 +71,10 @@ void ProcessPaymentForTerra() {
                                .ConfigureBusinessWallet(businessWallet) // Configure your Business Wallet
                                .ConfigureCustomerWallet(customerRecoveryWords); // Configure the Customer Wallet
 
-     var simulation = await paymentsManager.SimulateChargeCustomer(100);
-     await DisplayAlert("Successful Transaction", $"Gas Wanted: {simulation.GasWanted}, \n Gas Used: {simulation.GasUsed}", "Ok");
+     // Charge customer with LUNC
+     var receipt = await paymentsManager.ChargeCustomer(100);
 }
 ```
-
-## Terra.Net.OnChainPayments For Unity Developers
-
-If you are using Terra.Net.OnChainPayments for Unity, please make sure to install the [following asset](https://github.com/TerraMystics/NuGetForUnity) in your project, and follow the installation instructions above
 
 ## License
 
