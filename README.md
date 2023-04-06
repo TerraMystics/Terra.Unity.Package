@@ -25,7 +25,7 @@ Internally manages gas estimation required by the burn tax for successful transa
 
 Please make sure to import the following [package](https://github.com/TerraMystics/Terra.Unity.Package/blob/main/terra.payments.unitypackage) into your project as an asset.
 
-Please also make sure to install the following [dependency](https://github.com/TerraMystics/Newtonsoft.Json-for-Unity) package into your project too.
+Please also make sure to install the following [dependency](https://docs.unity3d.com/Packages/com.unity.nuget.newtonsoft-json@3.0/manual/index.html) package into your project too.
 
 ## Usage
 
