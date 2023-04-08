@@ -39,7 +39,6 @@ Please note: **PaymentsManager** must be registered as a Singleton to prevent is
 void ProcessPaymentForTerra() {
      // Wallet where customer payments will be transferred to
      string businessWallet = "terra17lmam6zguazs5q5u6z5mmx76uj63gldnse2pdp";
-     string customerWallet = "terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v";
 
      // Recovery Words of the Customer wallet that will be making the payment
      string customerRecoveryWords = "notice oak worry limit wrap speak medal online prefer cluster roof addict wrist behave treat actual wasp year salad speed social layer crew genius";
@@ -48,10 +47,19 @@ void ProcessPaymentForTerra() {
      // Set Blockchain to target (in this case Classic)
      var paymentsManager = new PaymentsManager(TerraEnvironment.Classic)
                                .ConfigureBusinessWallet(businessWallet) // Configure your Business Wallet
-                               .ConfigureCustomerWallet(customerRecoveryWords, customerWallet); // Configure the Customer Wallet
+                               .ConfigureCustomerWallet(customerRecoveryWords); // Configure the Customer Wallet
 
      // Charge customer with LUNC
      var receipt = await paymentsManager.ChargeCustomer(100);
+
+    var pubKey = await paymentsManager.VerifyCustomerSeedPhrase();
+    if (!string.IsNullOrWhiteSpace(pubKey))
+    {
+        // Wallet exists on chain!
+        // Charge the Wallet 100 LUNC
+        var payment = await paymentsManager.ChargeCustomer(100);
+        Console.WriteLine($"Receipt: {payment.TxFinderHashUrl}");
+    }
 }
 ```
 
